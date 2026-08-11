@@ -5,55 +5,59 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 1:
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu tổng quan về High Availability (HA) và vai trò của HA trong hệ thống Cloud.
+* Làm quen với nền tảng AWS và các dịch vụ sẽ sử dụng trong đề tài.
+* Chuẩn bị môi trường làm việc và tài khoản AWS để phục vụ các tuần tiếp theo.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập <br> -  Tìm hiểu khái niệm High Availability (HA).                                                                                            | 22/06/2026   | 22/06/2026      |
+| 3   | - Tìm hiểu tổng quan về nền tảng AWS <br>&emsp;-Nghiên cứu các nhóm dịch vụ chính của AWS:<br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + Monitoring <br>                                            | 23/06/2026   | 23/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 24/06/2026   | 24/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Tìm hiểu các dịch vụ sẽ sử dụng trong đề tài: <br>&emsp; + Amazon EC2 <br>&emsp; + Amazon RDS <br>&emsp; + Amazon S3 <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 25/06/2026   | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Cấu hình Security Group          | 26/06/2026   | 26/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
+* Hiểu được khái niệm High Availability (HA) và tầm quan trọng của việc đảm bảo tính sẵn sàng cao đối với các hệ thống triển khai trên nền tảng Cloud.
+* Hiểu được chức năng và phạm vi sử dụng của các nhóm dịch vụ chính trên AWS, bao gồm:
   * Compute
   * Storage
   * Networking 
   * Database
+  * Monitoring
   * ...
 
 * Đã tạo và cấu hình AWS Free Tier account thành công.
 
 * Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
+* Hiểu được cách tổ chức hạ tầng AWS thông qua các khái niệm:
+  * Region
+  * Availability Zone (AZ)
+  * Virtual Private Cloud (VPC)
   * ...
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Tìm hiểu chức năng của các dịch vụ sẽ sử dụng trong đề tài:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
+  * Amazon EC2
+  * Amazon RDS
+  * Amazon S3
+  * Elastic Load Balancer (ELB)
+  * Auto Scaling
+  * Amazon CloudWatch
   * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thực hành thành công:
+  * Tạo EC2 Instance.
+  * Cấu hình Security Group để cho phép kết nối SSH.
+  * Kết nối đến EC2 thông qua SSH.
+* Chuẩn bị đầy đủ môi trường và kiến thức nền tảng để bước sang giai đoạn thiết kế kiến trúc High Availability trên AWS ở tuần tiếp theo.
 
 
