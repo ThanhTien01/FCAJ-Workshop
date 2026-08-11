@@ -1,4 +1,4 @@
----
+<!-- ---
 title : "Access S3 from VPC"
 date : 2024-01-01
 weight : 3
@@ -15,4 +15,4 @@ In this section, you will create **a Gateway eendpoint** to access **Amazon S3**
 #### Content
 
 - [Create gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+- [Test gateway endpoint](3.2-test-gwe/) -->
