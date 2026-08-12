@@ -1,9 +1,9 @@
 ---
 title : "Dọn dẹp tài nguyên"
 date : 2024-01-01
-weight : 6
+weight : 11
 chapter : false
-pre : " <b> 5.6. </b> "
+pre : " <b> 5.11. </b> "
 ---
 
 #### Dọn dẹp tài nguyên
