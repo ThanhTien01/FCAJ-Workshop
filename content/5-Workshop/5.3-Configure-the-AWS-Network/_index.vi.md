@@ -35,7 +35,7 @@ Sau khi hoàn tất cấu hình, chọn **Create VPC**.
 Kiểm tra VPC vừa tạo tại **Your VPCs**. VPC phải có trạng thái **Available** và hiển thị đúng IPv4 CIDR đã cấu hình.
 
 **Hình 5.3. Cấu hình VPC**
-![VPC Configuration](/images/5-workshop/5.3-Configure-the-AWS-Network/vpc-created.png)
+![VPC Configuration](/images/5-workshop/5.3/vpc-created.png)
 
 ### Bước 2 Tạo Subnet
 Sau khi tạo VPC, hai subnet được tạo tại các **Availability Zone** khác nhau.
@@ -56,7 +56,7 @@ Subnet thứ hai được tạo tại `ap-southeast-1b` với CIDR `10.0.2.0/24`
 Sau khi tạo xong hai subnet, kiểm tra lại cấu hình tại **VPC → Subnets**.
 
 **Hình 5.4. Các Subnet được phân bố trên hai Availability Zone**
-![Các Subnet được phân bố trên hai Availability Zone](/images/5-Workshop/5.3-Configure-the-AWS-Network/subnets-created.png)
+![Các Subnet được phân bố trên hai Availability Zone](/images/5-Workshop/5.3/subnets-created.png)
 
 ### Bước 3 Tạo Internet Gateway và Route Table 
 Sau khi tạo VPC và các Subnet, bước tiếp theo là cấu hình Internet Gateway (IGW) và Route Table để cho phép các tài nguyên trong Public Subnet kết nối với Internet. Đây là bước cần thiết để EC2 có thể truy cập Internet và người dùng có thể truy cập ứng dụng Web.
