@@ -5,43 +5,55 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
 
 ### Mục tiêu tuần 8:
 
-* Tổng hợp kết quả từ các tuần triển khai và đưa ra đánh giá tổng quan về hệ thống.
-* Tối ưu lại cấu hình và quy trình vận hành để hệ thống hoạt động ổn định hơn.
-* Hoàn thiện báo cáo, hình ảnh và tài liệu mô tả kiến trúc AWS đã triển khai.
-* Xác định các điểm mạnh, hạn chế và hướng phát triển tiếp theo cho dự án.
+* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
+* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
 
 ### Các công việc cần triển khai trong tuần này:
+| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
+| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Tổng hợp các kết quả từ tuần 1 đến tuần 7 <br> - Rà soát lại các thành phần đã triển khai trên AWS | 10/08/2026 | 10/08/2026 |  |
-| 3 | - Đánh giá hiệu suất hệ thống sau quá trình triển khai <br> - Kiểm tra lỗi, điểm nghẽn và các vấn đề còn tồn tại | 11/08/2026 | 11/08/2026 | <https://aws.amazon.com/> |
-| 4 | - Tối ưu cấu hình EC2, security group, Auto Scaling và CloudWatch <br> - Điều chỉnh các chính sách để hệ thống ổn định hơn | 12/08/2026 | 12/08/2026 | <https://aws.amazon.com/> |
-| 5 | - Hoàn thiện báo cáo và sơ đồ kiến trúc <br> - Thu thập hình ảnh, logs và kết quả kiểm thử để minh họa | 13/08/2026 | 13/08/2026 |  |
-| 6 | - Final review báo cáo <br> - Kiểm tra chính tả, cấu trúc, các mục cần bổ sung và đóng gói kết quả cuối cùng | 14/08/2026 | 14/08/2026 |  |
 
 ### Kết quả đạt được tuần 8:
 
-* Tổng hợp được toàn bộ tiến độ từ giai đoạn khởi đầu đến giai đoạn vận hành và thử nghiệm hệ thống.
-* Đánh giá được hiệu quả của kiến trúc AWS đã triển khai, từ EC2, RDS, S3, ALB đến Auto Scaling và CloudWatch.
-* Xác định các điểm cần tối ưu để hệ thống hoạt động ổn định hơn, như chính sách scaling, cảnh báo, hay cấu hình bảo mật.
-* Hoàn thiện được báo cáo cuối kỳ với các phần: mục tiêu, kiến trúc, triển khai, kiểm thử, kết quả và đánh giá.
-* Chuẩn bị được tài liệu minh họa rõ ràng phục vụ cho thuyết trình hoặc báo cáo tổng kết.
-* Kết luận rằng hệ thống đã đạt được các mục tiêu cơ bản của workshop về tính sẵn sàng, khả năng chịu lỗi và khả năng giám sát.
+* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
+  * Compute
+  * Storage
+  * Networking 
+  * Database
+  * ...
 
-### Bài học rút ra:
+* Đã tạo và cấu hình AWS Free Tier account thành công.
 
-* Việc tổng hợp kết quả là bước quan trọng để nhìn lại toàn bộ quá trình, nhận diện thành công và những điểm cần cải thiện.
-* Hệ thống tốt không chỉ là hệ thống chạy được, mà còn là hệ thống dễ vận hành, dễ giám sát và dễ nâng cấp trong tương lai.
-* Tối ưu hóa không nên dừng ở mức triển khai ban đầu; nó cần được thực hiện liên tục trong quá trình vận hành.
-* Báo cáo cuối cùng cần có cấu trúc rõ ràng, dữ liệu minh chứng thực tế và các kết luận dựa trên quá trình kiểm thử.
-* Một dự án cloud thành công phụ thuộc nhiều vào việc kết hợp đúng giữa kiến trúc, quản trị tài nguyên và vận hành liên tục.
+* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
 
-### Đánh giá chung:
+* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
+  * Access Key
+  * Secret Key
+  * Region mặc định
+  * ...
 
-Tuần 8 là giai đoạn kết thúc của quá trình học tập và triển khai hệ thống trên AWS. Sau khi tổng hợp các kết quả từ các tuần trước, tôi nhận thấy hệ thống đã đạt được một số mục tiêu quan trọng như khả năng chịu lỗi, khả năng mở rộng và giám sát hiệu quả. Đây cũng là thời điểm để tôi hoàn thiện báo cáo, tổng hợp thành quả và ghi nhận những bài học quý giá cho các dự án tiếp theo. Kết quả của tuần này không chỉ là báo cáo cuối kỳ mà còn là căn cứ để đánh giá sự tiến bộ kỹ thuật và năng lực vận hành hệ thống trên môi trường cloud.
+* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+
+  * Kiểm tra thông tin tài khoản & cấu hình
+  * Lấy danh sách region
+  * Xem dịch vụ EC2
+  * Tạo và quản lý key pair
+  * Kiểm tra thông tin dịch vụ đang chạy
+  * ...
+
+* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* ...
+
 
