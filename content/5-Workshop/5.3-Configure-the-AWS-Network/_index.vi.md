@@ -78,4 +78,47 @@ Sau khi tạo VPC và các Subnet, bước tiếp theo là cấu hình Internet 
 ![Gắn internet gateway vào vpc](/images/5-Workshop/5.3/igwtovpc.png)
 **Hình 5.6 Internet Gateway đã được gắn vào VPC**
 
-###
+#### Tạo Route Table 
+1. Trong VPC Console, chọn Route tables.
+2. Chọn Create route table.
+3. Nhập:
+- Name: ```workshop-public-rt```
+- VPC: chọn VPC của Workshop.
+4. Chọn Create route table.
+![route-table](/images/5-Workshop/5.3/route-table.png)
+**Hình 5.7 Route Table đã được tạo**
+
+#### Thêm Internet Route 
+Chọn ```workshop-public-rt``` → tab Routes → Edit routes → Add route.
+
+Cấu hình:
+``` 
+Destination: 0.0.0.0/0
+Target: Internet Gateway
+        workshop-igw 
+```
+Sau đó chọn Save changes.
+
+Route **0.0.0.0/0** cho phép lưu lượng từ Public Subnet được định tuyến ra Internet thông qua Internet Gateway.
+![add-internet-route](/images/5-Workshop/5.3/add-internet-route.png)
+**Hình 5.8 Đã thêm Internet Route** 
+
+#### Gắn Route Table với Public Subnet
+1. Chọn tab Subnet associations.
+2. Chọn Edit subnet associations.
+3. Chọn các Public Subnet đã tạo.
+4. Chọn Save associations.
+
+![Gắn rt với public subnet](/images/5-Workshop/5.3/rt-to-subnet.png)
+
+**Hình 5.9 Đã gắn Route Table với Public Subnet**
+
+### Kiểm tra 
+Sau khi hoàn thành, kiểm tra lại:
+
+- Internet Gateway ở trạng thái Attached.
+- Route Table đã có route 0.0.0.0/0.
+- Route Table được liên kết với các Public Subnet.
+- Public Subnet sử dụng đúng Route Table.
+
+*Kết quả:* Public Subnet đã có đường kết nối Internet thông qua Internet Gateway, tạo cơ sở để triển khai EC2 và Application Load Balancer trong các bước tiếp theo.
