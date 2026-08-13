@@ -18,5 +18,4 @@ Trong workshop này, một **ứng dụng web viết bằng Python** được tr
 
 Workshop này tập trung không chỉ vào việc triển khai ứng dụng mà còn vào **kiểm thử tính sẵn sàng và khả năng chịu lỗi của hệ thống**. Các kịch bản chuyển đổi dự phòng được thực hiện bằng cách mô phỏng sự cố của một phiên bản ứng dụng và quan sát cách Load Balancer cùng Auto Scaling Group phản ứng. Kết quả sau đó được đánh giá để xác định hệ thống có thể duy trì tính sẵn sàng dịch vụ và tự động khôi phục khi xảy ra lỗi ở từng tài nguyên hay không.
 
-
 Việc triển khai tổng thể theo đúng lộ trình thực tập tám tuần đã lên kế hoạch, bao gồm nghiên cứu các khái niệm về Sẵn sàng cao, thiết kế kiến trúc Multi-AZ, triển khai ứng dụng, cấu hình các dịch vụ AWS, thực hiện Load Balancing và Auto Scaling, thiết lập giám sát và ghi nhật ký, thực hiện kiểm thử chuyển đổi dự phòng và đánh giá hệ thống cuối cùng.
