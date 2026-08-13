@@ -5,53 +5,58 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Set up and standardize the development environment for the project.
+* Learn the tools needed to build a Python application.
+* Build a simple demo application to test deployment and operational readiness.
+* Understand the local execution workflow before deploying to an AWS environment.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks completed this week:
 
+| Day | Work | Start Date | End Date | Source |
+| --- | --- | --- | --- | --- |
+| 2 | - Get familiar with the working environment and project direction <br> - Define the basic requirements for the Python demo application | 06/07/2026 | 06/07/2026 |  |
+| 3 | - Install Python, pip, and supporting development tools <br> - Check versions and system configuration <br> - Create a virtual environment | 07/07/2026 | 07/07/2026 | <https://www.python.org/> |
+| 4 | - Install the required libraries for the demo app: Flask/FastAPI, requests, dotenv <br> - Study the basic architecture of a Python web application | 08/07/2026 | 08/07/2026 | <https://flask.palletsprojects.com/> |
+| 5 | - Build the first demo application <br> - Create routes, handle requests, and display sample data <br> - Verify local functionality | 09/07/2026 | 10/07/2026 | <https://fastapi.tiangolo.com/> |
+| 6 | - Complete the demo interface, test features, and record the results <br> - Prepare documentation and learn from errors encountered during execution | 10/07/2026 | 10/07/2026 |  |
 
-### Week 3 Achievements:
+### Achievements this week:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully set up the Python development environment on my computer, including:
+  * A suitable Python version
+  * pip for dependency management
+  * A virtual environment to isolate the project environment
+  * Essential development tools
 
-* Successfully created and configured an AWS Free Tier account.
+* Clearly understood the role of the virtual environment in managing package versions and avoiding conflicts between projects.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Created a basic demo application in Python with a simple backend model capable of handling HTTP requests and returning data in JSON format or a basic web interface.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Successfully established a basic project structure, including:
+  * source code folders
+  * configuration files
+  * application startup file
+  * simple route-based API handlers
 
-* Used AWS CLI to perform basic operations such as:
+* Tested the application locally by running the server and accessing the newly created endpoints.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Gained a clear understanding of how a basic Python web application works, from receiving requests, processing logic, to returning responses to the client.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Learned how to debug issues that arise during package installation, app startup, and functional testing.
+
+* Built a strong foundation for future AWS deployment tasks, where the demo application can later run on EC2, containers, or other cloud environments.
+
+### Lessons learned:
+
+* Setting up the development environment correctly is the first and most important step in any technical project. If the environment is not standardized, package, version, and configuration issues can significantly slow progress.
+* Python is a suitable language for quickly building demo applications because of its simple syntax and rich library ecosystem.
+* Even a small demo application must have a clear structure so it can be scaled easily in the future.
+* Local testing helps detect errors early, especially issues related to dependencies, module imports, and application routing.
+* Building the demo application before deploying to AWS helped me understand the software development lifecycle, from the local environment to production deployment.
+
+### Overall assessment:
+
+Week 3 helped me build a crucial foundation for the project: from the working environment and package management to the development of a Python demo application. This is an essential starting phase for later AWS deployment work, integrating cloud services, and designing systems based on the High Availability model. The results achieved this week not only deepened my understanding of Python programming but also prepared the groundwork for the next practical phases in a real environment.
