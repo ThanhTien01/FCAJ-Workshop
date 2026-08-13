@@ -7,7 +7,6 @@ pre: " <b> 5. </b> "
 ---
 
 # ĐẢM BẢO TÍNH SẴN SÀNG CAO TRÊN AWS 
-
 #### Tổng quan
 
 Trong môi trường Cloud, việc đảm bảo hệ thống có thể hoạt động ổn định và liên tục là một trong những yêu cầu quan trọng đối với các ứng dụng và dịch vụ trực tuyến. Khi một máy chủ hoặc một thành phần của hệ thống gặp sự cố, nếu hệ thống không có cơ chế dự phòng, ứng dụng có thể bị gián đoạn và ảnh hưởng trực tiếp đến người dùng.
