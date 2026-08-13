@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-
 # ĐẢM BẢO TÍNH SẴN SÀNG CAO TRÊN AWS 
 
 #### Tổng quan
