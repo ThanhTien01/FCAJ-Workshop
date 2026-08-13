@@ -31,6 +31,6 @@ Through this topic, the participant has the opportunity to learn and practice th
 7. [Configure Application Load Balancer](5.7-Auto-Load-Balancer)
 8. [Configure Launch Template](5.8-Launch-Template)
 9. [Configure Auto Scaling](5.9-Auto-Scaling)
-10. [Configure CloudWatch](5.10-CloudWatch)
+10. [Configure CloudWatch and Test](5.10-CloudWatch)
 11. [Cleanup Resources](5.11-Cleanup)
 12. [Results and Conclusion](5.12-Result-Conclusion)

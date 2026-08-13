@@ -58,12 +58,6 @@ Before configuring the **Application Load Balancer (ALB)** to route incoming tra
   <em>Figure 5.13: Target Group Created Successfully</em>
 </p>
 
----
-title: "Configure the Application Load Balancer"
-weight: 2
-draft: false
----
-
 ### 2. Configure the Application Load Balancer (ALB)
 
 The **Application Load Balancer (ALB)** functions as the single public-facing entry point for user traffic. It automatically distributes incoming HTTP requests across backend instances managed within a Target Group across multiple **Availability Zones (AZs)**.
@@ -88,7 +82,7 @@ The **Application Load Balancer (ALB)** functions as the single public-facing en
 ### AWS Hands-On Implementation
 
 #### Step 1: Initialize Load Balancer Creation
-1. Access the **AWS Management Console** $\rightarrow$ Navigate to **EC2**.
+1. Access the **AWS Management Console** → Navigate to **EC2**.
 2. In the left navigation pane under **Load Balancing**, click **Load Balancers**.
 3. Click **Create load balancer**.
 4. Under **Application Load Balancer**, click **Create**.
@@ -101,8 +95,8 @@ The **Application Load Balancer (ALB)** functions as the single public-facing en
 #### Step 3: Multi-AZ Network Mapping
 1. **VPC:** Select `fca-workshop-vpc`.
 2. **Mappings:** Select two distinct Availability Zones:
-   * **`ap-southeast-1a`** $\rightarrow$ Select Subnet: `fca-public-subnet-a`
-   * **`ap-southeast-1b`** $\rightarrow$ Select Subnet: `fca-public-subnet-b`
+   * **`ap-southeast-1a`** → Select Subnet: `fca-public-subnet-a`
+   * **`ap-southeast-1b`** → Select Subnet: `fca-public-subnet-b`
 
 #### Step 4: Assign Security Group
 1. Under **Security groups**, remove the `default` security group.
@@ -112,7 +106,7 @@ The **Application Load Balancer (ALB)** functions as the single public-facing en
 1. Under **Listeners and routing**:
    * **Protocol:** `HTTP`
    * **Port:** `80`
-2. Under **Default action**, set **Forward to** $\rightarrow$ `fca-web-target-group`.
+2. Under **Default action**, set **Forward to** → `fca-web-target-group`.
 
 #### Step 6: Review and Create
 1. Review all parameters in the **Summary** pane.
@@ -172,7 +166,7 @@ This registration enables the Application Load Balancer to recognize active back
 
 ### AWS Hands-On Implementation Steps
 
-1. Navigate to **AWS Management Console** $\rightarrow$ **EC2** $\rightarrow$ **Target Groups**.
+1. Navigate to **AWS Management Console** → **EC2** → **Target Groups**.
 2. Select **`fca-web-target-group`**.
 3. Navigate to the **Targets** tab and click **Register targets**.
 4. In the **Available instances** list, check **`fca-web-server-01`**.

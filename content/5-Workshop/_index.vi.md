@@ -30,6 +30,6 @@ Thông qua đề tài, người thực hiện có cơ hội tìm hiểu và th�
 7. [Cấu hình Application Load Balancer](5.7-Auto-Load-Balancer)
 8. [Cấu hình Launch Template](5.8-Launch-Template)
 9. [Cấu hình Auto Scaling](5.9-Auto-Scaling)
-10. [Cấu hình CloudWatch](5.10-CloudWatch)
+10. [Cấu hình CloudWatch và kiểm thử](5.10-CloudWatch)
 11. [Dọn dẹp tài nguyên](5.11-Cleanup)
 12. [Kết quả và kết luận](5.12-Result-Conclusion)
