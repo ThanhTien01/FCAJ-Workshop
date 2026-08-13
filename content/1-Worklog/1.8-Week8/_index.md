@@ -5,53 +5,41 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Consolidate the results from the implementation weeks and provide an overall assessment of the system.
+* Optimize the configuration and operational procedures to improve system stability.
+* Complete the report, diagrams, and documentation describing the AWS architecture that was implemented.
+* Identify strengths, limitations, and future development directions for the project.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks completed this week:
 
+| Day | Work | Start Date | End Date | Source |
+| --- | --- | --- | --- | --- |
+| 2 | - Summarize the results from Weeks 1 to 7 <br> - Review all components deployed on AWS | 10/08/2026 | 10/08/2026 |  |
+| 3 | - Evaluate system performance after the deployment process <br> - Check for errors, bottlenecks, and remaining issues | 11/08/2026 | 11/08/2026 | <https://aws.amazon.com/> |
+| 4 | - Optimize the EC2 configuration, security groups, Auto Scaling, and CloudWatch <br> - Adjust policies to make the system more stable | 12/08/2026 | 12/08/2026 | <https://aws.amazon.com/> |
+| 5 | - Finalize the report and architecture diagram <br> - Collect screenshots, logs, and test results for documentation | 13/08/2026 | 13/08/2026 |  |
+| 6 | - Final review of the report <br> - Check spelling, structure, and missing sections before final packaging | 14/08/2026 | 14/08/2026 |  |
 
-### Week 8 Achievements:
+### Achievements this week:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Consolidated the entire progression from the initial phase to system operation and testing.
+* Evaluated the effectiveness of the implemented AWS architecture, from EC2, RDS, and S3 to ALB, Auto Scaling, and CloudWatch.
+* Identified optimization points to improve system stability, including scaling policies, alert configuration, and security settings.
+* Completed the final report with sections covering objectives, architecture, implementation, testing, results, and evaluation.
+* Prepared clear supporting materials for presentation or summary reporting.
+* Concluded that the system met the core workshop objectives in terms of availability, fault tolerance, and monitoring capability.
 
-* Successfully created and configured an AWS Free Tier account.
+### Lessons learned:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Result consolidation is a crucial step for reviewing the full process, identifying successes, and recognizing areas for improvement.
+* A good system is not just one that runs successfully; it is also one that is easy to operate, monitor, and upgrade in the future.
+* Optimization should not stop at the initial deployment phase; it must continue throughout the operating lifecycle.
+* The final report must have a clear structure, real evidence, and conclusions based on testing results.
+* A successful cloud project depends heavily on the proper combination of architecture, resource management, and continuous operation.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Overall assessment:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Week 8 marked the final stage of the learning and deployment process on AWS. After consolidating the results from previous weeks, I recognized that the system had achieved several important goals, including fault tolerance, scalability, and effective monitoring. This was also the time to finalize the report, summarize the achievements, and document the valuable lessons for future projects. The outcome of this week was not only the final report but also a clear basis for evaluating technical progress and operational capability in the cloud environment.

@@ -5,53 +5,43 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Set up a monitoring and logging system for the application on AWS.
+* Understand how Amazon CloudWatch collects metrics and logs from EC2, ALB, and related services.
+* Create alarms and alerts to respond quickly to incidents or abnormal traffic levels.
+* Improve system administration through a centralized monitoring and logging model.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks completed this week:
 
+| Day | Work | Start Date | End Date | Source |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the role of CloudWatch in monitoring AWS systems <br> - Study the different types of metrics, logs, and alarms | 27/07/2026 | 27/07/2026 | <https://aws.amazon.com/cloudwatch/> |
+| 3 | - Configure CloudWatch on EC2 <br> - Enable basic metrics such as CPU, memory, disk, and network usage | 28/07/2026 | 28/07/2026 | <https://aws.amazon.com/cloudwatch/> |
+| 4 | - Create a log group and send logs from the Python application to CloudWatch Logs <br> - Check the log format and structure | 29/07/2026 | 29/07/2026 | <https://aws.amazon.com/cloudwatch/> |
+| 5 | - Create alert alarms for CPU, instance status, and system errors <br> - Test alerts when resource consumption increases | 30/07/2026 | 30/07/2026 | <https://aws.amazon.com/cloudwatch/> |
+| 6 | - Consolidate monitoring data and evaluate monitoring effectiveness <br> - Record lessons learned and propose improvements for the system | 31/07/2026 | 31/07/2026 | <https://aws.amazon.com/cloudwatch/> |
 
-### Week 6 Achievements:
+### Achievements this week:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Clearly understood the role of CloudWatch in monitoring, tracking, and alerting on AWS system issues.
+* Successfully configured basic EC2 metrics such as CPU utilization, disk usage, and network traffic.
+* Configured logs from the Python application and sent them to CloudWatch Logs for storage and real-time analysis.
+* Learned how to manage log groups, log streams, and query log data when incidents occur.
+* Created alert alarms for scenarios such as CPU overload, resource shortages, or system errors.
+* Successfully tested the response capability of alarms when the system experienced high load or abnormal conditions.
+* Gained the ability to analyze incident causes through metrics and logs, significantly reducing debugging time.
+* Recognized the importance of monitoring and logging in maintaining system stability and availability.
 
-* Successfully created and configured an AWS Free Tier account.
+### Lessons learned:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Monitoring not only helps observe system status but also supports operational decisions during resource optimization and system management.
+* CloudWatch provides an overview of the performance of EC2, ALB, and related services, helping detect potential failures early.
+* Logs are a crucial data source for understanding incident causes, while metrics help evaluate trends in system load.
+* Alarms are essential for reducing response time when issues arise, especially in production environments.
+* A well-designed system must not only run stably but also include a clear monitoring mechanism so operators can proactively act when early warning signs appear.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Overall assessment:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Week 6 focused on the operational side of the system, as the application had already been deployed and was running in the AWS environment. Setting up monitoring and logging with CloudWatch helped me understand how to track performance, detect errors, and respond quickly to incidents. This was a critical step in transitioning from basic deployment to real system operations, while also laying the groundwork for evaluation and improvement in the following weeks.

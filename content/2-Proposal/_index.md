@@ -5,111 +5,141 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# High Availability on AWS
+## Ensuring High Availability on AWS
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+## 1. Problem Summary
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+In web applications, relying on a single server or a single Availability Zone can lead to service interruptions when the server experiences failures, traffic spikes, or infrastructure issues.
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+This workshop proposes building a web application on AWS using a High Availability model, where the application is deployed across multiple Amazon EC2 instances in different Availability Zones. An Application Load Balancer is used to distribute traffic, Auto Scaling ensures automatic scaling and replacement of servers when needed, Amazon RDS Multi-AZ provides database redundancy, and Amazon CloudWatch is used for system monitoring.
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+The goal of this workshop is to build a system that can maintain operations, tolerate failures, and automatically recover when a component in the system fails.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+## 2. Problem Statement
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+If a web application is deployed on only one EC2 instance, it will have a Single Point of Failure. When the EC2 instance fails, the entire application may become inaccessible.
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+In addition, when traffic increases suddenly, a single server may not be able to handle the load. Scaling servers manually also increases response time and administrative workload.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+For the database, if only one database instance is used, a database failure can also disrupt the entire application.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+Therefore, this workshop focuses on addressing the following issues:
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+- Eliminate the Single Point of Failure at the application layer.
+- Ensure the application continues to work when an EC2 instance fails.
+- Automatically scale the system when traffic increases.
+- Automatically replace failed EC2 instances.
+- Improve database availability.
+- Monitor and detect system issues.
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+## 3. Solution Architecture
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+The solution is built on AWS using a deployment model across two Availability Zones.
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+**Architecture diagram is missing**
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+| Component | Role |
+|---|---|
+| Amazon VPC | Builds the network environment |
+| Public/Private Subnet | Separates network resources |
+| EC2 | Runs the Python application |
+| Docker | Packages the application |
+| Amazon ECR | Stores Docker Images |
+| Application Load Balancer | Distributes traffic |
+| Auto Scaling | Automatically scales and replaces EC2 instances |
+| Amazon RDS Multi-AZ | Provides database redundancy |
+| CloudWatch | Monitoring and alerts |
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+Main workflow:
+```text
+User
+↓
+Application Load Balancer
+↓
+EC2 in AZ-A / EC2 in AZ-B
+↓
+Application
+↓
+RDS Multi-AZ
+```
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+## 4. Technical Deployment
 
-Total: $0.7/month, $8.40/12 months
+*Main implementation steps:*
+1. Design a suitable VPC, subnets, security groups, and IAM roles.
+2. Deploy EC2 instances running the Python application.
+3. Create and configure the Application Load Balancer and target group.
+4. Configure the Auto Scaling Group with scale-out and scale-in policies based on CPU or request volume.
+5. Deploy Amazon RDS for the database and configure backups and maintenance.
+6. Use Amazon S3 to store static content and backup data.
+7. Set up CloudWatch metrics, alarms, and logs to monitor CPU, latency, and error rate.
+8. Test failover by stopping one EC2 instance and observing ALB/ASG behavior.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+## 5. Implementation Timeline and Milestones
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+| Week | Content | Result |
+|---|---|---|
+| Week 1 | Learn High Availability and AWS services | Understand the foundational knowledge |
+| Week 2 | Design the Multi-AZ architecture | Complete system architecture |
+| Week 3 | Prepare Python, Docker, and ECR | Application runs with Docker |
+| Week 4 | Build VPC, EC2, and RDS | Basic system is operational |
+| Week 5 | Configure ALB and Auto Scaling | Complete load balancing and scaling |
+| Week 6 | Configure CloudWatch | Complete monitoring |
+| Week 7 | Test failover and Auto Scaling | Verify fault tolerance |
+| Week 8 | Evaluate, optimize, and finalize the report | Complete the workshop and report |
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+*Important milestones*
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+Milestone 1: The Python application runs successfully on EC2.
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+Milestone 2: ALB distributes requests to multiple EC2 instances.
+
+Milestone 3: Auto Scaling is working.
+
+Milestone 4: RDS Multi-AZ is working.
+
+Milestone 5: CloudWatch monitoring is complete.
+
+Milestone 6: EC2 failure testing is successful.
+
+Milestone 7: The report is complete.
+
+## 6. Budget Estimate
+
+*Infrastructure cost*
+- Amazon EC2: $1.50/month (2 small instances)
+- Application Load Balancer: $1.50/month (1 ALB)
+- Amazon RDS: $2.00/month (small MySQL configuration)
+- Amazon EBS: $0.50/month (storage)
+- Amazon ECR: $0.10/month (Docker image storage)
+- Amazon CloudWatch: $0.20/month (monitoring)
+- Data transfer: $0.20/month (low traffic)
+
+Total: approximately $6.00/month, $48.00 for 8 months.
+
+## 7. Risk Assessment
+
+| Risk | Level | Solution |
+|---|---|---|
+| EC2 failure | High | Use multiple EC2 instances and Auto Scaling |
+| One AZ fails | High | Distribute EC2 instances across multiple AZs |
+| ALB does not receive requests | Medium | Check Listener, Security Group, and Target Group |
+| EC2 is in an Unhealthy state | High | Configure health checks correctly |
+| Auto Scaling does not create EC2 instances | High | Check Launch Template, IAM Role, and Subnet |
+| Database failure | High | Use RDS Multi-AZ |
+| CPU spike | Medium | Configure Auto Scaling policies |
+| Incorrect Security Group configuration | High | Open only the required ports |
+| Docker container does not run | Medium | Check Docker Image, ECR, and User Data |
+| Incorrect network configuration | Medium | Check Route Tables, Subnets, and Internet Gateway |
+
+> In addition, during implementation, it is necessary to regularly check AWS Billing to avoid unexpected costs.
+
+## 8. Expected Results
+
+Expected outcomes:
+- The web system remains operational even when an instance or an AZ fails.
+- Traffic is evenly distributed through the ALB, and ASG automatically adjusts capacity.
+- Data is securely stored on RDS and S3.
+- CloudWatch monitoring provides timely alerts.
+- A failover testing scenario and evaluation report are prepared to assess the effectiveness of the solution.

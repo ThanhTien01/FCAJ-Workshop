@@ -5,53 +5,44 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand and deploy the Application Load Balancer to distribute traffic across the system.
+* Configure the Auto Scaling Group to improve application availability and scalability.
+* Evaluate system stability when instance count and traffic volume change.
+* Understand the process of configuring target groups, health checks, and scale-out/scale-in policies.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks completed this week:
 
+| Day | Work | Start Date | End Date | Source |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the AWS Load Balancer architecture <br> - Compare ALB with other load balancing models | 20/07/2026 | 20/07/2026 | <https://aws.amazon.com/elasticloadbalancing/> |
+| 3 | - Create a target group for EC2 instances <br> - Configure health checks and healthy/unhealthy status | 21/07/2026 | 21/07/2026 | <https://aws.amazon.com/elasticloadbalancing/> |
+| 4 | - Deploy the Application Load Balancer <br> - Configure listeners, ports, protocols, and routing | 22/07/2026 | 22/07/2026 | <https://aws.amazon.com/elasticloadbalancing/> |
+| 5 | - Create the Auto Scaling Group <br> - Configure the launch template and min/max/desired capacity | 23/07/2026 | 23/07/2026 | <https://aws.amazon.com/autoscaling/> |
+| 6 | - Configure scale-out / scale-in policies based on CPU <br> - Test instance scaling up and down and evaluate the results | 24/07/2026 | 24/07/2026 | <https://aws.amazon.com/autoscaling/> |
 
-### Week 5 Achievements:
+### Achievements this week:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Clearly understood the role of the Application Load Balancer in distributing traffic and improving system availability.
+* Successfully configured target groups and health checks so ALB could determine the health status of EC2 instances.
+* Deployed ALB on AWS and configured listeners to forward requests to the application.
+* Gained a solid understanding of how the Auto Scaling Group operates by adjusting instance capacity and automatically replacing unhealthy instances.
+* Created a launch template to standardize EC2 configuration when Auto Scaling expands or recreates instances.
+* Successfully configured scale-out and scale-in policies based on CPU usage and other system metrics.
+* Tested the process of increasing the number of instances under high load and reducing them when demand decreased.
+* Observed the clear benefits of Load Balancer and Auto Scaling in improving stability, increasing traffic handling capacity, and reducing downtime risk.
 
-* Successfully created and configured an AWS Free Tier account.
+### Lessons learned:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Load Balancers help distribute traffic evenly, prevent a single instance from becoming overloaded, and improve application availability.
+* Health checks are essential so ALB can identify which instances are healthy and which should be removed from the traffic distribution pool.
+* Auto Scaling is an effective solution for dynamically expanding resources based on real demand, helping optimize costs and increase flexibility.
+* When configuring Auto Scaling, it is necessary to define min, max, and desired capacity carefully to avoid over-scaling or insufficient capacity during peak load periods.
+* Testing scale-out/scale-in policies helps evaluate how quickly the system responds under changing traffic conditions.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### Overall assessment:
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Week 5 was a crucial stage in the system deployment process, as I moved from running the application on a single EC2 instance to a higher-availability model. With the configuration of Load Balancer and Auto Scaling, the system was able to distribute traffic and automatically adjust based on workload. This was a major upgrade that brought the system closer to the High Availability architecture and laid the foundation for the following weeks on monitoring, failover, and performance optimization.
