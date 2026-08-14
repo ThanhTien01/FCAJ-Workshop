@@ -1,0 +1,15 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  # Khai báo chính xác phiên bản Hugo bạn đang dùng trên máy
+  HUGO_VERSION = "0.163.3"
+  
+  # Ép Netlify tải bản Hugo Extended (Bắt buộc cho các theme có Sass/SCSS)
+  HUGO_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
