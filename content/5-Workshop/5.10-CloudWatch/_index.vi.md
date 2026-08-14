@@ -86,6 +86,7 @@ EC2-02 → Healthy
 
 Sau khi EC2 bị terminate, số lượng instance trong hệ thống sẽ tạm thời giảm xuống.
 
+![alt text](/images/5-Workshop/5.10/5.10.5.png)
 **Hình 5.10.5. Terminate EC2 để kiểm thử Failover**
 
 #### Bước 3: Kiểm tra Auto Scaling
@@ -110,7 +111,7 @@ Health Check
       ↓
 Healthy
 ```
-
+![alt text](/images/5-Workshop/5.10/5.10.6.png)
 **Hình 5.10.6. Auto Scaling tự động khởi tạo EC2 thay thế**
 
 #### Bước 4: Kiểm tra Target Group
