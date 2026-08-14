@@ -24,7 +24,7 @@ CPU Utilization
 ```
 >Chỉ số này thể hiện mức sử dụng CPU của EC2 theo thời gian.
 
-![alt text](image.png)
+![alt text](/images/5-Workshop/5.10/5.10.1.png)
 **Hình 5.10.1. Theo dõi chỉ số CPUUtilization của EC2**
 
 #### Bước 3: Tạo CloudWatch Alarm
@@ -49,7 +49,7 @@ workshop-high-cpu-alarm
 
 >Khi CPU vượt quá 70%, CloudWatch Alarm sẽ chuyển sang trạng thái In alarm.
 
-![alt text](image-1.png)
+![alt text](/images/5-Workshop/5.10/5.10.2.png)
 **Hình 5.10.2. Cấu hình CloudWatch Alarm**
 
 ### 5.10.2. Kiểm thử Failover
@@ -75,8 +75,8 @@ Kiểm tra Target Group:
 EC2-01 → Healthy
 EC2-02 → Healthy
 ```
-![alt text](image-2.png)
-**Hình 5.10.4. Trạng thái hệ thống trước khi kiểm thử Failover**
+![alt text](/images/5-Workshop/5.10/5.10.3.png)
+**Hình 5.10.3. Trạng thái hệ thống trước khi kiểm thử Failover**
 
 #### Bước 2: Terminate một EC2
 1. Truy cập EC2 → Instances.
