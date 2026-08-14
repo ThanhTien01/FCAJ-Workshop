@@ -52,11 +52,6 @@ Before configuring the **Application Load Balancer (ALB)** to route incoming tra
 1. On the **Register targets** screen, skip registering EC2 instances for now (registration will be performed in Step 5.7.4).
 2. Scroll to the bottom and click **Create target group**.
 
-<p align="center">
-  <img src="/images/5-Workshop/5.7-ALB/target-group-created.png" alt="Target Group Created" width="85%" />
-  <br>
-  <em>Figure 5.13: Target Group Created Successfully</em>
-</p>
 
 ### 2. Configure the Application Load Balancer (ALB)
 

@@ -37,7 +37,7 @@ Therefore, this workshop focuses on addressing the following issues:
 
 The solution is built on AWS using a deployment model across two Availability Zones.
 
-**Architecture diagram is missing**
+![alt text](/images/5-Workshop/5.1-Workshop-overview/aws-architecture.png)
 
 | Component | Role |
 |---|---|
@@ -51,18 +51,7 @@ The solution is built on AWS using a deployment model across two Availability Zo
 | Amazon RDS Multi-AZ | Provides database redundancy |
 | CloudWatch | Monitoring and alerts |
 
-Main workflow:
-```text
-User
-↓
-Application Load Balancer
-↓
-EC2 in AZ-A / EC2 in AZ-B
-↓
-Application
-↓
-RDS Multi-AZ
-```
+
 
 ## 4. Technical Deployment
 

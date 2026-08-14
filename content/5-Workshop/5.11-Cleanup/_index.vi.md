@@ -17,7 +17,7 @@ AWS Console → EC2 → Auto Scaling Groups
 2. Chọn Delete.
 3. Xác nhận xóa Auto Scaling Group.
 4. Kiểm tra các EC2 do Auto Scaling quản lý đã được xử lý.
-
+![alt text](/images/5-Workshop/5.11/delete-asg.png)
 **Hình 5.11.1. Xóa Auto Scaling Group**
 
 ### 5.11.2. Xóa Application Load Balancer
@@ -32,6 +32,7 @@ EC2 → Load Balancers
 
 >Sau khi xóa, kiểm tra danh sách Load Balancer để đảm bảo workshop-alb không còn tồn tại.
 
+![alt text](/images/5-Workshop/5.11/delete-alb.png)
 **Hình 5.11.2. Xóa Application Load Balancer**
 
 ### 5.11.3. Xóa Target Group
@@ -44,6 +45,7 @@ EC2 → Target Groups
 2. Chọn Actions → Delete.
 3. Xác nhận xóa Target Group.
 
+![alt text](/images/5-Workshop/5.11/delete-target.png)
 **Hình 5.11.3. Xóa Target Group**
 
 ### 5.11.4. Xóa Launch Template
@@ -58,6 +60,7 @@ EC2 → Launch Templates
 
 >Launch Template không phát sinh chi phí trực tiếp, tuy nhiên nên xóa để tránh để lại các cấu hình không cần thiết.
 
+![alt text](/images/5-Workshop/5.11/delete-launch.png)
 **Hình 5.11.4. Xóa Launch Template**
 
 ### 5.11.5. Xóa Amazon RDS
@@ -71,6 +74,7 @@ Nếu Workshop đã tạo Database RDS và không còn sử dụng:
 5. Tắt tùy chọn tạo final snapshot nếu Database chỉ được sử dụng cho Workshop và không cần giữ dữ liệu.
 6. Xác nhận xóa Database.
 
+![alt text](/images/5-Workshop/5.11/delete-rds.png)
 **Hình 5.11.5. Xóa Amazon RDS**
 
 >Cần kiểm tra kỹ trước khi xóa vì thao tác này có thể làm mất dữ liệu Database.
@@ -86,6 +90,7 @@ Nếu không cần sử dụng Bucket sau Workshop:
 5. Chọn Bucket → Delete.
 6. Nhập tên Bucket để xác nhận.
 
+![alt text](/images/5-Workshop/5.11/delete-s3.png)
 **Hình 5.11.6. Xóa Amazon S3 Bucket**
 
 ### 5.11.7. Xóa các tài nguyên mạng
@@ -102,8 +107,6 @@ Thực hiện tại:
 ```
 AWS Console → VPC
 ```
-
-**Hình 5.11.7. Dọn dẹp các tài nguyên mạng**
 
 >Cần xóa các tài nguyên phụ thuộc trước. Ví dụ, không thể xóa VPC khi bên trong vẫn còn EC2, Load Balancer hoặc các tài nguyên mạng đang sử dụng.
 

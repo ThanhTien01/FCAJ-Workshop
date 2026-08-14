@@ -36,7 +36,7 @@ Do đó, Workshop tập trung giải quyết các vấn đề:
 
 Giải pháp được xây dựng trên AWS theo mô hình triển khai trên hai Availability Zone.
 
-**Hình kiến trúc còn thiếu**
+![alt text](/images/5-Workshop/5.1-Workshop-overview/aws-architecture.png)
 
 | Thành phần | Vai trò |
 |---|---|
@@ -50,18 +50,6 @@ Giải pháp được xây dựng trên AWS theo mô hình triển khai trên ha
 | Amazon RDS Multi-AZ | Dự phòng Database |
 | CloudWatch | Monitoring và cảnh báo |
 
-Luồng hoạt động chính: 
-``` text 
-User
-↓
-Application Load Balancer
-↓
-EC2 ở AZ-A / EC2 ở AZ-B
-↓
-Application
-↓
-RDS Multi-AZ
-```
 
 ## 4. Triển khai kỹ thuật
 

@@ -54,11 +54,6 @@ pre: " <b> 5.7. </b> "
 1. Tại màn hình **Register targets**, tạm thời **chưa chọn/register EC2 instance** ở bước này (chúng ta sẽ register ở bước 5.7.4).
 2. Cuộn xuống cuối trang và nhấp chọn **Create target group**.
 
-<p align="center">
-  <img src="/images/5-Workshop/5.7-ALB/target-group-created.png" alt="Target Group Created" width="85%" />
-  <br>
-  <em>Figure 5.13: Target Group Created Successfully</em>
-</p>
 
 ---
 

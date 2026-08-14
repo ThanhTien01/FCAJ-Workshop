@@ -129,17 +129,15 @@ EC2-03 → Healthy
 ```
 Điều này cho thấy EC2 mới đã vượt qua Health Check và sẵn sàng nhận lưu lượng từ ALB.
 
-**Hình 5.10.7. EC2 mới chuyển sang trạng thái Healthy**
 
 #### Bước 5: Kiểm tra ứng dụng
 
 Truy cập DNS Name của Application Load Balancer:
 ```
-http://<ALB-DNS-Name>
+http://fca-web-alb-1842986293.ap-southeast-1.elb.amazonaws.com
 ```
-Nếu ứng dụng vẫn truy cập được sau khi một EC2 bị terminate, quá trình Failover đã hoạt động thành công.
+Ứng dụng vẫn truy cập được sau khi một EC2 bị terminate, quá trình Failover đã hoạt động thành công.
 
-**Hình 5.10.8. Ứng dụng vẫn hoạt động sau khi Failover**
 
 ### 5.10.3. Đánh giá kết quả kiểm thử
 
